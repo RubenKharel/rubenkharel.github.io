@@ -100,3 +100,15 @@ body:hover{
   background-color: #073b4c;
   transition: all .5s ease-out;
 }
+
+.back {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 20px;
+  background-color: #ef476f;
+}
+
+.back:hover{
+  background-color: #06d6a0;
+}
