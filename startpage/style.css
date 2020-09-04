@@ -92,10 +92,10 @@ button:hover {
     padding: 3em;
     margin: 3%;
     height: 9.3em;
-    width: 5em;
-    box-shadow: 8px 8px rgba(0, 0, 0, 0.2);
-    font-size: 1.3em;
-    font-family: monospace;
+    width: 4em;
+    box-shadow: 20px 20px rgba(0, 0, 0, 0.2);
+    font-size: 1em;
+    font-family: 'Dosis', sans-serif;
 }
 
 a, a:visited {
@@ -109,15 +109,19 @@ header {
     font-family: sans-serif;}
 
 .social a:hover, .social header {
-    color: var(--red);
+    color: #07a6f9;
 }
 
 .dev a:hover, .dev header {
     color: var(--yellow);
 }
 
+.reddit a:hover, .reddit header {
+    color: #ff4500;
+}
+
 .other a:hover, .other header {
-    color: var(--blue);
+    color: #e563ff;
 }
 
 @media (max-width:620px) {
@@ -125,4 +129,8 @@ header {
         padding: 2em;
         margin: 0;
     }
+}
+
+.for-font {
+    font-family: 'Dosis', sans-serif;
 }
