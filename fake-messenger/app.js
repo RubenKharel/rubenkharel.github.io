@@ -31,7 +31,7 @@ if (person != null && message != null){
   else {
     return {
       person : person.value,
-      message : `me/him single`
+      message : ':/'
     }
 }
 }
@@ -49,20 +49,99 @@ document.addEventListener('keypress', function(event){
 
 
 let SendMessage = (inputObject) => {
-  var html, newHtml, lastHalf, firstHalf;
+  var html, newHtml, className;
 
-  if (inputObject.person === 'him'){
-    className = 'him single'
+  if (inputObject.person === 'me'){
+    if (inputObject.last.includes('him')){
+      className = 'single'
+    }
+    if (inputObject.last === 'me single'){
+      className = 'mend'
+      //singleTostart
+    }
+    if (inputObject.last === 'me mmiddle'){
+      className = 'mend'
+    }
+    if (inputObject.last === 'me mend'){
+      className = 'mend'
+      //mendTomid
+    }
+    if (inputObject.last === 'null'){
+      className = 'single';
+    }
   }
-  else if (inputObject.person === 'me'){
-    className = 'me single'
+  else if (inputObject.person === 'him'){
+    if (inputObject.last.includes('me')){
+      className = 'single'
+    }
+    if (inputObject.last === 'him single'){
+      className = 'hend'
+      //singleTostart
+    }
+    if (inputObject.last === 'him hmiddle'){
+      className = 'hend'
+    }
+    if (inputObject.last === 'him hend'){
+      className = 'hend'
+      //mendTomid
+    }
+    if (inputObject.last === 'null') {
+      className = 'single';
+    }
   }
-  firstHalf = `<div class="%?%"><span class='${className}'>`
-  lastHalf = '%message%</span></div>'
-  html = firstHalf+lastHalf;
+  
+
+
+
+  html = `<span class='%who% ${className}'>%message%</span>`
+
   // replace place holder text with stuff code
   newHtml = html.replace('%who%', inputObject.person);
   newHtml = newHtml.replace('%message%', inputObject.message);
   //Manipulate DOM
   document.querySelector(DOMstring.lastMessage).insertAdjacentHTML('beforeend', newHtml)
+
+
+  if (className === 'mmiddle'){
+    singleToStart();
+  }
+
+  if (className === 'mend'){
+    endToMiddle();
+    singleToStart();
+  }
+
+  if (className === 'hmiddle'){
+    singleToStartx();
+  }
+
+  if (className === 'hend'){
+    endToMiddlex();
+    singleToStartx();
+  }
+}
+
+var singleToStart = () => {
+  document.querySelector(DOMstring.lastMessage).lastElementChild.previousElementSibling.classList.remove('single')
+
+  document.querySelector(DOMstring.lastMessage).lastElementChild.previousElementSibling.classList.add('mstart')
+
+}
+var endToMiddle = () => {
+  if (document.querySelector(DOMstring.lastMessage).lastElementChild.previousElementSibling.classList[1] === 'mend'){
+  document.querySelector(DOMstring.lastMessage).lastElementChild.previousElementSibling.classList.remove('mend')
+  document.querySelector(DOMstring.lastMessage).lastElementChild.previousElementSibling.classList.add('mmiddle')
+  }
+}
+
+var singleToStartx = () => {
+  document.querySelector(DOMstring.lastMessage).lastElementChild.previousElementSibling.classList.remove('single')
+  document.querySelector(DOMstring.lastMessage).lastElementChild.previousElementSibling.classList.add('hstart')
+
+}
+var endToMiddlex = () => {
+  if (document.querySelector(DOMstring.lastMessage).lastElementChild.previousElementSibling.classList[1] === 'hend'){
+  document.querySelector(DOMstring.lastMessage).lastElementChild.previousElementSibling.classList.remove('hend')
+  document.querySelector(DOMstring.lastMessage).lastElementChild.previousElementSibling.classList.add('hmiddle')
+  }
 }
