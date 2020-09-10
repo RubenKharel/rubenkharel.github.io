@@ -1,0 +1,297 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 89vh;
+  background-color: #222222;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.title-bar {
+  margin: 6px;
+}
+
+.people {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.name-message {
+  display: flex;
+  flex-flow: column;
+}
+
+.dp {
+  border-radius: 100px;
+}
+
+.image {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.user-name {
+  color: white;
+}
+
+.time {
+  color: #808080;
+}
+
+.last-message {
+  color: #6c6c6c;
+}
+
+.active {
+  background-color: #323232;
+}
+
+.people:hover {
+  background-color: #323232;
+}
+
+.sidebar {
+  width: 455px;
+}
+
+.titlebar-container {
+  background-color: black;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  flex-flow: row wrap ;
+}
+
+.message-window-container {
+  width: 100%;
+  background-color: black;
+}
+
+.container {
+  display: flex;
+}
+
+.window-control {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.img-min:hover{
+  background-color: #323232;
+}
+.img-max:hover{
+  background-color: #323232;
+}
+.img-cross:hover{
+  background-color: #eb3a2a;
+}
+
+/*46x30*/
+
+.img-min {
+  padding: 10px 19px 10px 19px;
+}
+.img-max {
+  padding: 10px 19px 10px 19px;
+}
+.img-cross {
+  padding: 10px 19px 10px 19px;
+}
+
+.chat-name-img {
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.chat-name-text {
+  color: white;
+  font-weight: bold;
+  margin-left: 10px;
+  display: flex;
+  align-self: center;
+}
+
+.chat-name {
+  display: flex;
+  justify-content: space-between;
+}
+
+.chat-head-and-control {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.dp-title-new {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.my-dp {
+  border-radius: 50%;
+}
+
+.app-title {
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+}
+
+.chat-control {
+  display: flex;
+  justify-items: flex-end;
+}
+
+.img-call {
+  margin-right: 20px;
+}
+.img-search {
+  margin-right: 20px;
+}
+.img-menu {
+  margin-right: 20px;
+}
+
+.message-boxes {
+  color: white;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.scroll {
+  height: 80vh;
+  overflow: hidden;
+}
+.scroll:hover {
+  overflow-y: auto;
+}
+
+.pep-container {
+  height: 89vh;
+  overflow: hidden;
+}
+.pep-container:hover{
+  overflow-y: auto;
+}
+
+
+.single {
+  border-radius: 30px;
+}
+.hstart {
+  border-radius: 30px;
+  border-bottom-left-radius: 5px;
+}
+.hmiddle{
+  border-radius: 30px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.hend{
+  border-radius: 30px;
+  border-top-left-radius: 5px;
+}
+
+.mstart {
+  border-radius: 30px;
+  border-bottom-right-radius: 5px;
+}
+.mmiddle{
+  border-radius: 30px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.mend{
+  border-radius: 30px;
+  border-top-right-radius: 5px;
+}
+
+
+.him {
+  margin-top: 1px;
+  margin-bottom: 1px;
+  margin-left: 10px;
+  padding: 8px;
+  padding-left: 10px;
+  padding-right: 13px;
+  background-color: #303030;
+  display: flex;
+  justify-self: flex-start;
+  width: fit-content;
+  align-self: flex-start;
+  margin-right: auto;
+}
+.me {
+  margin-top: 2px;
+  margin-bottom: 2px;
+  background-color: #0099ff;
+  margin-right: 25px;
+  padding: 8px;
+  padding-left:13px;
+  padding-right:10px;
+  display: flex;
+  width: fit-content;
+  align-self: flex-end;
+  margin-left: auto;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 1px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.add__type{
+  display: none;
+}
+.add__container:hover > .add__type{
+  display: inline;
+}
+
+.add__container {
+  display: grid;
+  grid-template-columns: 95% 5%;
+  position: relative;
+  padding: 0 0 0 10px;
+  position: sticky;
+  clear: both;
+}
+
+.add__container:hover {
+  grid-template-columns: 10% 90% 5%;
+}
+
+
+.message {
+  background: #303030 url("./images/icons/smile-wink-regular.svg") no-repeat right;
+  background-size: 20px;
+  background-position-x: 74vw;
+  color: #888e99;
+  border-radius: 30px;
+  outline: none;
+  padding: 10px;
+}
+
+.thumb{
+  margin-left: 15px;
+  float: right;
+}
