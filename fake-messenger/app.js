@@ -31,7 +31,7 @@ if (person != null && message != null){
   else {
     return {
       person : person.value,
-      message : `${person} single`
+      message : `me/him single`
     }
 }
 }
