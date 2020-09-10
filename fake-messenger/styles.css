@@ -5,7 +5,7 @@
 }
 
 body {
-  height: 89vh;
+  height: 100vh;
   background-color: #222222;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -166,7 +166,7 @@ body {
 }
 
 .scroll {
-  height: 80vh;
+  height: 87vh;
   overflow: hidden;
 }
 .scroll:hover {
@@ -277,7 +277,7 @@ body {
 }
 
 .add__container:hover {
-  grid-template-columns: 10% 90% 5%;
+  grid-template-columns: 10% 85% 5%;
 }
 
 

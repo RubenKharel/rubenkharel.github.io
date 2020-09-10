@@ -43,6 +43,7 @@ document.addEventListener('keypress', function(event){
 
   if (event.keyCode === 13 || event.which === 13){
     SendMessage(getInput());
+    clearTextField();
   }
 });
 
@@ -144,4 +145,8 @@ var endToMiddlex = () => {
   document.querySelector(DOMstring.lastMessage).lastElementChild.previousElementSibling.classList.remove('hend')
   document.querySelector(DOMstring.lastMessage).lastElementChild.previousElementSibling.classList.add('hmiddle')
   }
+}
+
+var clearTextField = () => {
+  document.querySelector('.message').value = '';
 }
